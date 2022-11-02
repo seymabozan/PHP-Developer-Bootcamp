@@ -1,2 +1,2 @@
 # Bootcamp
-# Tamamlamış olduğum bu uygulamada Ağıl sayısı, Ağıl kapasitesi ve Toplam koyun sayısıyla ağıllara koyun yerleştirme uygulaması yaptım. Bu uygulamada dizileri, dizi değişkenlerini, If-Else kontrol yapılarını kullandım. İlk olarak agil sayısı, agıl kapasitesi ve toplam koyun sayısı için çoklu boyutlu bir dizi oluşturdum. If-Else yapsısı ile de ağıl sayısı ile ağıl kapasitesini kontrol ediyorum. Agıllara yerleşen koyun sayısını ekrana yazmak içinse farklı bir dizi oluşturdum ve bu diziyi ters çevirip sondan ekrana basa bilmesi için array_reverse() fonksiyonunu kullandım. Aynı zamanda dizileri ekrana bastırmak içinse foreach döngüsünü kullandım.
+
