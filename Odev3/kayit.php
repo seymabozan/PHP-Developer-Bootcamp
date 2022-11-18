@@ -15,6 +15,6 @@ $sorgu->execute();
 echo "<script> 
 alert('Bilgileriniz Kayıt Edildi!'); 
 window.location.href = 'liste.php';
-</script>"; //Som olarak script ile kayıt yapıldıysa ekrana mesaj yazdırıyoruz.
+</script>"; //Son olarak kayıt yapıldıysa script ile ekrana mesaj yazdırıyoruz.
 
 ?>
