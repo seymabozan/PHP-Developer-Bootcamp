@@ -1,10 +1,10 @@
 <?php
 
-$baglan = new PDO("mysql:host=localhost;dbname=odev;charset=utf8","root","");
+$baglan = new PDO("mysql:host=localhost;dbname=odev;charset=utf8","root",""); //PDO ile varitabanı bağlantısı kuruyorum.
 $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$sorgu = $baglan->query("select * from kisiler");
-$toplamkayit = $sorgu->rowCount();
+$sorgu = $baglan->query("select * from kisiler"); //Query ile select * from ile tüm tabloya/tüm bilgilere erişiyorum.
+$toplamkayit = $sorgu->rowCount(); //RowCount() ile tabloda kaç tane kayıt olduğuna erişiyorum.
 echo "<table width='70%' border='1' align='center' style='border-collapse:collapse;height:125px;border-color:black'>
     <tr align='center'>
     <td><b>Adı Soyadı</b></td>
@@ -12,7 +12,7 @@ echo "<table width='70%' border='1' align='center' style='border-collapse:collap
     <td><b>İşlem</b></td>
     </tr>";
 
-while($satir = $sorgu->fetchObject()){
+while($satir = $sorgu->fetchObject()){ //While tablodaki değerleri/verileri fetchObject() ile döngüye sokup ekrana yazdırıyorum.
     echo "<tr align='center'>
     <td>$satir->adsoyad</td>
     <td>$satir->telefon</td>
