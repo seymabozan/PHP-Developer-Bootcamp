@@ -1,6 +1,6 @@
 <?php
 
-$baglan = new PDO("mysql:host=localhost;dbname=odev;charset=utf8","root",""); //PDO ile veritabı bağlantısı tekrar kuruyorum.
+$baglan = new PDO("mysql:host=localhost;dbname=odev;charset=utf8","root",""); //PDO ile veritabanı bağlantısı tekrar kuruyorum.
 $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sil = $_GET["id"]; //Get metoduyla gelen id $sil değişkenine atıyorum.
