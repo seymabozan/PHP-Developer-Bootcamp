@@ -1,8 +1,6 @@
 <?php
 
-$baglan = new PDO("mysql:host=localhost;dbname=odev;charset=utf8","root",""); //PDO ile varitabanı bağlantısı kuruyorum.
-$baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+include("kayit.php");
 $sorgu = $baglan->query("select * from kisiler"); //Query ile select * from ile tüm tabloya/tüm bilgilere erişiyorum.
 $toplamkayit = $sorgu->rowCount(); //RowCount() ile tabloda kaç tane kayıt olduğuna erişiyorum.
 echo "<table width='70%' border='1' align='center' style='border-collapse:collapse;height:125px;border-color:black'>
