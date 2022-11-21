@@ -1,11 +1,7 @@
 <?php
-
 session_start(); //Session start ile session başlatıyorum.
-//error_reporting(0);
-
 $adet = $_POST["deger"];
 ?>
-
 
 <!Doctype html>
 <html>
@@ -40,34 +36,40 @@ $adet = $_POST["deger"];
     echo "</table>
         <br>
         <input type='submit' style='background-color: blue; color:white; border:1; border-color: royalblue; width:12%; height: 30px;' name='ekle' value='Ürünü Sepete Ekle'>
-        </form>
-        ";
+        </form>";
+
     echo "<br><br><h3>Sepetiniz:</h3>";
-    $sepeticerik = $_SESSION["urunlistesi"];
-    echo "<table border='1' style='border-collapse: collapse; width: 42%;'>
+
+    $sepeticerik = count($_SESSION["urunlistesi"]);
+
+    if ($sepeticerik > 0) {
+        echo "<table border='1' style='border-collapse: collapse; width: 42%;'>
         <tr style='height: 30px;'>
         <td>Ürün Adı</td>
         <td style='text-align: center;'>Adet</td>
         <td style='text-align: center;'>Toplam</td>
         </tr>";
         $sepettoplam = 0;
-   
-        foreach ($sepeticerik as $urunid => $urunadeti) {
+
+        foreach ($_SESSION["urunlistesi"] as $urunid => $urunadeti) {
             $urunsira = array_search($urunid, array_column($urunler, 'no'));
             $urunad = $urunler[$urunsira]["urun"];
             $urunfiyat = $urunler[$urunsira]["fiyat"];
-            //$uruntoplam = $urunadeti * $urunfiyat;
-            //$sepettoplam += $uruntoplam;
-   
+            $uruntoplam = $urunadeti * $urunfiyat;
+            $sepettoplam += $uruntoplam;
+
             echo "<tr>
             <td>$urunad</td>
-            <td>urunadet</td>
-            <td>uruntoplam ₺</td>
+            <td>$urunadeti</td>
+            <td>$uruntoplam TL</td>
             </tr>";
-         }
-        echo "
+        }
+        echo "<td colspan='3'>Sepet Toplam: $sepettoplam TL</td>
         </table>";
+    }
+    else{
+        echo "<h4>Sepetiniz Boş</h4>";
+    }
     ?>
 </body>
-
 </html>
