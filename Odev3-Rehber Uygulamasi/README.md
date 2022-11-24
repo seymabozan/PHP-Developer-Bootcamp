@@ -8,4 +8,4 @@ Bir dosyada bu bilgileri dinamik olarak ziyaretçilerin kaydedebilmesi için HTM
 
 ![ekran3](https://user-images.githubusercontent.com/101289239/203833224-50f92892-68a8-4e2c-a23d-4c59cd7f68d8.png)
 
-![ekran3 2](https://user-images.githubusercontent.com/101289239/203833782-2cacd5de-f112-460f-b2df-372a6d8e3f55.png)
+![ekran3 2 1](https://user-images.githubusercontent.com/101289239/203834104-dbb50f08-fb74-4e3e-b4a2-02d1c0bd361c.png)
