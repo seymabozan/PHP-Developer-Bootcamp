@@ -24,7 +24,7 @@ require_once('islem.php');
     if($_POST) {
         $adsoyad = $_POST["adsoyad"];
         $tckimlik = $_POST["tcno"];
-        $durum = '';
+        $durum = $_GET["durum"];
         
         $tc = new tcKimlik($tckimlik);
         
