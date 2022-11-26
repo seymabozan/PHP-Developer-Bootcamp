@@ -31,7 +31,7 @@ require_once('islemclass.php');
         $sonuc = $tc->dogrulama($adsoyad,$durum);
 
         if($sonuc) {
-            $sorgu = $baglanti->prepare("INSERT INTO kayit VALUES(?, ?, 'TC Kimlik Geçerli')");
+            $sorgu = $baglanti->prepare("INSERT INTO kayit VALUES(?, ?, ?)");
             $sorgu->bindParam(1, $adsoyad, PDO::PARAM_STR);
             $sorgu->bindParam(2, $tckimlik, PDO::PARAM_STR);
             $sorgu->bindParam(3, $durum, PDO::PARAM_STR);
@@ -41,7 +41,7 @@ require_once('islemclass.php');
             </script>";
         }
         else {
-            $sorgu = $baglanti->prepare("INSERT INTO kayit VALUES(?, ?, 'TC Kimlik Geçersiz')");
+            $sorgu = $baglanti->prepare("INSERT INTO kayit VALUES(?, ?, ?)");
             $sorgu->bindParam(1, $adsoyad, PDO::PARAM_STR);
             $sorgu->bindParam(2, $tckimlik, PDO::PARAM_STR);
             $sorgu->bindParam(3, $durum, PDO::PARAM_STR);
