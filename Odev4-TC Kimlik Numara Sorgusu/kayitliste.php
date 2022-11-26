@@ -1,5 +1,5 @@
 <?php
-require_once('islem.php');
+require_once('islemclass.php');
 
 $sorgu = $baglanti->query("SELECT * FROM kayit");
 $toplamkayit = $sorgu->rowCount(); 
