@@ -1,5 +1,5 @@
 <?php
-require_once('islem.php');
+require_once('islemclass.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
