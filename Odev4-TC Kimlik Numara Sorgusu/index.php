@@ -36,7 +36,7 @@ require_once('islemclass.php');
             $sorgu->bindParam(2, $tckimlik, PDO::PARAM_STR);
             $sorgu->bindParam(3, $durum, PDO::PARAM_STR);
             echo "<script>
-            alert('TC Kimlik Geçerli');
+            alert('BİLGİ: TC Kimlik Geçerli');
             window.location.href = 'index.php';
             </script>";
         }
@@ -46,7 +46,7 @@ require_once('islemclass.php');
             $sorgu->bindParam(2, $tckimlik, PDO::PARAM_STR);
             $sorgu->bindParam(3, $durum, PDO::PARAM_STR);
             echo "<script>
-            alert('TC Kimlik Geçersiz');
+            alert('BİLGİ: TC Kimlik Geçersiz');
             window.location.href = 'index.php';
             </script>";
         }
