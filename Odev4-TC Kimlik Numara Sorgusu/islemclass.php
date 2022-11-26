@@ -18,7 +18,7 @@ catch (PDOException $e) {
 */
 
 class tcKimlik {
-    private $tckimlik;
+    public $tckimlik;
 
     function __construct($tckimlik) {
         if(strlen($tckimlik) != 11) {
@@ -30,7 +30,7 @@ class tcKimlik {
         $this -> tckimlik = (double)$tckimlik;
     }
 
-    private function algoritmaKontrol() {
+    public function algoritmaKontrol() {
 
         $tekSayiToplami = 0;
         $ciftSayiToplami = 0;
