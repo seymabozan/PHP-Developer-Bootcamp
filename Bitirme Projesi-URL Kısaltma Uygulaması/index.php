@@ -30,21 +30,21 @@
     </main>
 
     <div id="sonuc"></div>
+    
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
-
     <script>
-        $(documnet).ready(function() {
+        $(document).ready(function() {
             $("button").click(function() {
-                $.ajax({
+                $.ajax({ //$.get veya $.post kullanılabilir!
                     cache: false,
-                    type = "POST",
+                    type: "POST",
                     url: "index.php",
                     data: "url=" + $("#url").val(),
-                    success: function(result) {
+                    success: function (result) {
                         $("#sonuc").html(result);
                     },
-                    error: function(hxr) {
+                    error: function (hxr) {
                         $("#sonuc").html("Hata: " + xhr.status + " " + xhr.statusText);
                     }
                 })
