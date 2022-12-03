@@ -1,4 +1,4 @@
-# FLO-Bootcamp-Bitirme-Projesi-URL-Kısaltma-Uygulaması
+# FLO Bootcamp Bitirme Projesi - URL Kısaltma Uygulaması
  
  
  URL Kısaltma Uygulamamızda, bizi ilk olarak anasayfa karşılıyor, burada form ile inputla girdi alıyoruz. Buraya uzun olan URL’yi kopyalıyoruz ve URL kısalt butonuna tıkladığımızda ajax ile kısaltılmış URL’yi ekrana yazdırıyoruz.
