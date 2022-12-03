@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+Options -Indexes
+Options -MultiViews
+
+RewriteEngine On
+RewriteRule ^i/(.*?)$ go.php?kod=$1
+
+ServerSignature Off
+
+<FilesMatch "(^#.*#|\.(bak|conf|log|sql)|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy all
+</FilesMatch>
