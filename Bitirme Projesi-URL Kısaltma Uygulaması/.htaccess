@@ -3,7 +3,7 @@ Options -Indexes
 Options -MultiViews
 
 RewriteEngine On
-RewriteRule ^/(.*?)$ go.php?kod=$1
+RewriteRule ^/(.*?)$ yonlendirme.php?kod=$1
 
 ServerSignature Off
 
