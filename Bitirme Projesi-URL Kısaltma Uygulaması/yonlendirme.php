@@ -19,10 +19,10 @@ if($kod != "") {
     $sonuc = $islem->sayibul($kod);
     if($sonuc != 0) {
         $bilgi = $islem->bilgial($kod);
-        helper::yonlendir($bilgi["kisa_url"]);
+        yardim::yonlendir($bilgi["kisa_url"]);
     }
     else{
-        helper::yonlendir("http:://");
+        yardim::yonlendir("http:://");
     }
 }
 else{
