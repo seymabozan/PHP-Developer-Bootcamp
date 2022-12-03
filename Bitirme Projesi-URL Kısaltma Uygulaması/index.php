@@ -92,7 +92,8 @@ if($_POST) {
                 $bul->bindParam(":url", $url, PDO::PARAM_STR);
                 $bul->execute();
                 $sonuc = $bul->fetch(PDO::FETCH_ASSOC);
-                echo "<div class='goster' style='text-align: center;margin-block-start: 2.5em;font-size:22px'><b>Kısaltılmış URL: </b>".$sonuc["kisa_url"]."</div>";
+                echo "<div class='goster' style='text-align: center;margin-block-start: 2.5em;font-size:22px'>
+                    <b>Kısaltılmış URL: </b>".$kisaKod1."</div>";
             }
         }
         else {
